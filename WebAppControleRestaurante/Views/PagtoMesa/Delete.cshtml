@@ -11,30 +11,30 @@
     <h4>Você está prestes a apagar o pagamento abaixo:</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2" placeholder="Nome do cliente">
-            @Html.DisplayNameFor(model => model.Cliente)
+        <dt class="col-sm-2">
+            <label asp-for="Cliente" class="control-label">Nome do cliente</label>
         </dt>
-        <dd class="col-sm-10" placeholder="Nome do cliente">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Cliente)
         </dd>
-        <dt class="col-sm-2" placeholder="Número da mesa">
-            @Html.DisplayNameFor(model => model.NumMesa)
+        <dt class="col-sm-2">
+            <label asp-for="NumMesa" class="control-label">Número da mesa</label>
         </dt>
-        <dd class="col-sm-10" placeholder="Número da mesa">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NumMesa)
         </dd>
-        <dt class="col-sm-2" placeholder="Valor do Consumo">
-            @Html.DisplayNameFor(model => model.ValConsumo)
+        <dt class="col-sm-2">
+            <label asp-for="ValConsumo" class="control-label">Valor do consumo</label>
         </dt>
-        <dd class="col-sm-10" placeholder="Valor do Consumo">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ValConsumo)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Apagar pagamento" class="btn btn-danger" /> |
-        <input type="submit" value="Voltar" class="btn btn-outline-primary" /> |
+        <input type="submit" value="Apagar pagamento" class="btn btn-danger" />
+        <a class="btn btn-secondary" asp-controller="PagtoMesa" asp-action="Index" role="button">Voltar</a>
         
     </form>
 </div>

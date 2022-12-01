@@ -15,6 +15,7 @@ namespace WebAppControleRestaurante.Controllers
         public IActionResult Privacy()
         {
             return View();
+            /*view*/
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
